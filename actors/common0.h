@@ -14,6 +14,20 @@ extern Hierarchy RCP_HmsCannonBody[];
 // cannon_base
 extern Hierarchy RCP_HmsCannonBase[];
 
+// carryboy
+extern Hierarchy RCP_HmsEnemycarryboy[];
+extern Gfx RCP_carry_boy_carry9[];
+extern Gfx RCP_carry_boy_carry0[];
+extern Gfx RCP_carry_boy_carry1[];
+extern Gfx RCP_carry_boy_carry8[];
+extern Gfx RCP_carry_boy_carry7[];
+extern Gfx RCP_carry_boy_carry5[];
+extern Gfx RCP_carry_boy_carry2[];
+extern Gfx RCP_carry_boy_carry6[];
+extern Gfx RCP_carry_boy_carry3[];
+extern Gfx RCP_carry_boy_carry4[];
+extern AnimePtr carryboy_anime[];
+
 // koopa_shell
 extern Hierarchy RCP_HmsRedNoko[];
 extern Hierarchy RCP_HmsGreenNoko[];

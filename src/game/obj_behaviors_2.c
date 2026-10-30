@@ -160,4 +160,25 @@ static s32 obj_check_attacks(struct ObjectHitbox *hitbox, s32 attackedMarioActio
     return 0;
 }
 
+static void treat_far_home_as_mario(f32 threshold) {
+    f32 dx = o->oHomeX - o->oPosX;
+    f32 dy = o->oHomeY - o->oPosY;
+    f32 dz = o->oHomeZ - o->oPosZ;
+    f32 distance = sqrtf(dx * dx + dy * dy + dz * dz);
+
+    if (distance > threshold) {
+        o->oAngleToMario = atan2s(dz, dx);
+        o->oDistanceToMario = 25000.0f;
+    } else {
+        dx = o->oHomeX - gMarioObject->oPosX;
+        dy = o->oHomeY - gMarioObject->oPosY;
+        dz = o->oHomeZ - gMarioObject->oPosZ;
+        distance = sqrtf(dx * dx + dy * dy + dz * dz);
+
+        if (distance > threshold) {
+            o->oDistanceToMario = 20000.0f;
+        }
+    }
+}
+
 #include "behaviors/triplet_butterfly.inc.c" // pathfly.c

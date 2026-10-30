@@ -496,10 +496,11 @@
 // find me
 //#define MODEL_KOOPA_SHELL                 0xBE        // koopa_shell_geo
 //#define MODEL_KOOPA_WITHOUT_SHELL         0xBF        // koopa_without_shell_geo
-//#define MODEL_GOOMBA                      0xC0        // goomba_geo
+// #define MODEL_GOOMBA                        0xC0        // goomba_geo
 //#define MODEL_SEAWEED                     0xC1        // seaweed_geo
 //#define MODEL_AMP                         0xC2        // dAmpGeo
 //#define MODEL_BOBOMB_BUDDY                0xC3        // bobomb_buddy_geo
+//#define MODEL_HANA                          0xC4        // wiggler
 // find me
 // find me
 // find me
@@ -527,7 +528,7 @@
 //#define MODEL_FLYGUY                      0xDC        // shyguy_geo
 //#define MODEL_TOAD                        0xDD        // toad_geo
 //#define MODEL_PEACH                       0xDE        // peach_geo
-//#define MODEL_CHUCKYA                     0xDF        // chuckya_geo
+#define MODEL_CHUCKYA                       0xDF        // RCP_HmsEnemycarryboy
 //#define MODEL_WHITE_PUFF                  0xE0        // white_puff_geo
 //#define MODEL_TRAJECTORY_MARKER_BALL      0xE1        // bowling_ball_track_geo - duplicate used in SSL Pyramid small sized and as a track ball
 

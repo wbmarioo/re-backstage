@@ -61,6 +61,7 @@ struct Skybox sSkyBoxInfo[2];
 
 typedef const u8 *const SkyboxTexture[80];
 
+extern SkyboxTexture bbh_skybox_ptrlist;
 extern SkyboxTexture bidw_skybox_ptrlist;
 extern SkyboxTexture bitfs_skybox_ptrlist;
 extern SkyboxTexture ccm_skybox_ptrlist;
@@ -68,13 +69,14 @@ extern SkyboxTexture cloud_floor_skybox_ptrlist;
 extern SkyboxTexture water_skybox_ptrlist;
 extern SkyboxTexture wdw_skybox_ptrlist;
 
-SkyboxTexture *sSkyboxTextures[6] = {
+SkyboxTexture *sSkyboxTextures[7] = {
     &water_skybox_ptrlist,
     &bitfs_skybox_ptrlist,
     &wdw_skybox_ptrlist,
     &cloud_floor_skybox_ptrlist,
     &ccm_skybox_ptrlist,
     &bidw_skybox_ptrlist,
+    &bbh_skybox_ptrlist,
 };
 
 /**

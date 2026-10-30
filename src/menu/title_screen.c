@@ -107,13 +107,7 @@ s32 intro_regular(void) {
 
     print_intro_text();
 
-    #ifdef DEBUG
-        if (gPlayer1Controller->buttonDown == QUIT_LEVEL_SELECT_COMBO) {
-            gDebugLevelSelect = TRUE;            
-        } else {
-            gDebugLevelSelect = FALSE;            
-        }
-    #endif
+    gDebugLevelSelect = TRUE;   
 
     if (gPlayer1Controller->buttonPressed & START_BUTTON) {
         play_sound(SOUND_MENU_STAR_SOUND, gGlobalSoundSource);
@@ -132,25 +126,6 @@ s32 intro_regular(void) {
  */
 s32 intro_game_over(void) {
     s32 level = LEVEL_NONE;
-
-    print_intro_text();
-
-    #ifdef DEBUG
-        if (gPlayer1Controller->buttonDown == QUIT_LEVEL_SELECT_COMBO) {
-            gDebugLevelSelect = TRUE;            
-        } else {
-            gDebugLevelSelect = FALSE;            
-        }
-    #endif
-
-    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
-        play_sound(SOUND_MENU_STAR_SOUND, gGlobalSoundSource);
-
-        // same criteria as intro_regular
-        level = 100 + gDebugLevelSelect;
-
-        save_file_create_temporary_file();
-    }
     return level;
 }
 

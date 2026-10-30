@@ -32,6 +32,7 @@
 #include "levels/ddd/header.h"
 #include "levels/wf/header.h"
 #include "levels/ccm/header.h"
+#include "levels/thi/header.h"
 
 #include "make_const_nonconst.h"
 #include "behavior_data.h"
@@ -555,6 +556,34 @@ const BehaviorScript bhvCannonBurnSmoke[] = { // e_gas_b (called 'bhvCannonBaseU
         ADD_INT(oAnimState, 1),
     END_REPEAT(),
     DEACTIVATE(),
+};
+
+const BehaviorScript bhvChuckya[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, (OBJ_FLAG_HOLDABLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    LOAD_ANIMATIONS(oAnimations, carryboy_anime),
+    ANIMATE(5),
+    SET_INT(oInteractType, INTERACT_GRABBABLE),
+    SET_HITBOX(/*Radius*/ 150, /*Height*/ 100),
+    SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
+    SPAWN_OBJ(/*Model*/ MODEL_NONE, /*Behavior*/ bhvChuckyaAnchorMario),
+    SET_INT(oNumLootCoins, 5),
+    SET_INT(oIntangibleTimer, 0),
+    SET_HOME(),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_chuckya_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvChuckyaAnchorMario[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, (OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BILLBOARD(),
+    SET_FLOAT(oParentRelativePosY, -60),
+    SET_FLOAT(oParentRelativePosZ, 150),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_chuckya_anchor_mario_loop),
+    END_LOOP(),
 };
 
 // pathcastlebg.p bhv data

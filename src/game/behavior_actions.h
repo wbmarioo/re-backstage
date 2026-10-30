@@ -31,6 +31,9 @@ void bhv_fish_group_loop(void);
 void bhv_cannon_base_loop(void);
 void bhv_cannon_barrel_loop(void);
 void bhv_cannon_burn_smoke_loop(void);
+// TODO: find behavior name for chuckya
+void bhv_chuckya_loop(void);
+void bhv_chuckya_anchor_mario_loop(void);
 // pathcastleobj.p
 void bhv_wf_rotating_wooden_platform_loop(void);
 // pathchimney.p

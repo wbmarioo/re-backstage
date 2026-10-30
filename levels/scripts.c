@@ -144,6 +144,7 @@ const LevelScript script_func_global_1[] = {
     LOAD_MODEL_FROM_GEO(MODEL_RED_KOOPA_SHELL,         RCP_HmsRedNoko),
     LOAD_MODEL_FROM_GEO(MODEL_CANNON_BARREL,           RCP_HmsCannonBody),
     LOAD_MODEL_FROM_GEO(MODEL_CANNON_BASE,             RCP_HmsCannonBase),
+    LOAD_MODEL_FROM_GEO(MODEL_CHUCKYA,                 RCP_HmsEnemycarryboy),
     RETURN(),
 };
 

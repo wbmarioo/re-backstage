@@ -26,7 +26,7 @@ enum MacroPresets {
     macro_butterfly_triplet,
     macro_empty_90,
     macro_empty_91,
-    macro_empty_92,
+    macro_chuckya,
     macro_small_bully,
     macro_empty_95,
     macro_unknown_96,

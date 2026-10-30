@@ -330,6 +330,7 @@
 "sound/sequences/us/20_cutscene_ending.m64": [1882,{"us":[8174192]}],
 "sound/sequences/us/21_menu_file_select.m64": [781,{"us":[8176080]}],
 "sound/sequences/us/22_cutscene_lakitu.m64": [313,{"us":[8176864]}],
+"textures/skyboxes/bbh.png": [84288,{"jp":[3118928,0],"us":[3125680,0],"eu":[2999280,0],"sh":[2973648,0],"cn":[3047408,0]}],
 "textures/skyboxes/bidw.png": [131392,{"jp":[3146352,0],"us":[3153104,0],"eu":[3026704,0],"sh":[3001072,0],"cn":[3074832,0]}],
 "textures/skyboxes/bitfs.png": [102720,{"jp":[2942432,0],"us":[2949184,0],"eu":[2822784,0],"sh":[2797152,0],"cn":[2870912,0]}],
 "textures/skyboxes/ccm.png": [131392,{"jp":[2847920,0],"us":[2854672,0],"eu":[2728272,0],"sh":[2702640,0],"cn":[2776400,0]}],

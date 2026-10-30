@@ -259,6 +259,12 @@
 #define /*0x104*/ oCheepCheepUnk104 OBJECT_FIELD_F32(0x1F)
 #define /*0x108*/ oCheepCheepUnk108 OBJECT_FIELD_F32(0x20)
 
+/* Chuckya */
+#define /*0x088*/ oChuckyaUnk88  OBJECT_FIELD_S32(0x00)
+#define /*0x0F8*/ oChuckyaUnkF8  OBJECT_FIELD_S32(0x1C)
+#define /*0x0FC*/ oChuckyaUnkFC  OBJECT_FIELD_S32(0x1D)
+#define /*0x100*/ oChuckyaUnk100 OBJECT_FIELD_S32(0x1E)
+
 /* Coin */
 #define /*0x0F4*/ oCoinCollectedFlags       OBJECT_FIELD_S32(0x1B)
 #define /*0x0F8*/ oCoinOnGround             OBJECT_FIELD_S32(0x1C)

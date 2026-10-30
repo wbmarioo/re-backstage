@@ -1,0 +1,21 @@
+// 0x0700DD50 - 0x0700DEE2
+const MacroObject thi_seg7_area_1_macro_objs[] = {
+    MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_cannon_open,           /*yaw*/   0, /*pos*/  6656, -2832,  6964, /*bhvParam*/ 0x40),
+    MACRO_OBJECT               (/*preset*/ macro_fish_spawner_few_blue, /*yaw*/   0, /*pos*/ -6550, -3450,  4100),
+    MACRO_OBJECT               (/*preset*/ macro_fish_spawner_few_blue, /*yaw*/   0, /*pos*/ -1750, -3450,  7800),
+    MACRO_OBJECT               (/*preset*/ macro_fish_spawner_few_blue, /*yaw*/   0, /*pos*/  1950, -3500,  7600),
+    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/ -4896,    41, -1986),
+    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/ -4842,  -410,  -780),
+    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/ -4880,  -187, -1373),
+    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/  5996, -2559,  -624),
+    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/ -1200, -1540,  1150),
+    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/  -250, -1540,  1150),
+    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/  7188, -1535, -3000),
+    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/  7188, -1535, -3400),
+    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/  7188, -1535, -3800),
+    // MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/  6428, -2559,  4857),
+    // MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/  6600, -1535, -5726),
+    // MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/ -6260, -2969,  6630),
+    // MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/ -3588,  -511,  3088),
+    MACRO_OBJECT_END(),
+};

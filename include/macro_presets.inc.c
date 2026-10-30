@@ -31,7 +31,7 @@ static struct MacroPreset sMacroObjectPresets[] = {
     /* macro_butterfly_triplet           */ { bhvTripletButterfly, MODEL_BUTTERFLY, 0 },
     /* macro_empty_90                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_empty_91                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
-    /* macro_empty_92                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
+    /* macro_chuckya                     */ { bhvChuckya, MODEL_CHUCKYA, 0 },
     /* macro_small_bully                 */ { bhvSmallBully, MODEL_BULLY, 0 },
     /* macro_empty_95                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 }, // unused (blargg leftover)
     /* macro_unknown_96                  */ { bhvMotos, MODEL_MOTOS, 0 }, // unused (motos leftover)

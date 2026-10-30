@@ -65,6 +65,7 @@ static s16 sBooHitRotations[] = { // rotdata
 #include "behaviors/door.inc.c" // pathdoor.p
 #include "behaviors/thwomp.inc.c" // pathdosun.p
 #include "behaviors/tumbling_bridge.inc.c" // pathdownbar.p
+#include "behaviors/chuckya.inc.c" // TODO: add chuckya bhv filename here
 #include "behaviors/motos_projectile.inc.c" // pathenemyfire.p
 #include "behaviors/beta_moving_flames.inc.c" // pathfire.p
 #include "behaviors/flamethrower.inc.c" // pathfirebar.p

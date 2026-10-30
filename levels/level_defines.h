@@ -23,7 +23,7 @@ STUB_LEVEL(  "BATTLE FIELD",   LEVEL_BOB,              COURSE_BOB,              
 STUB_LEVEL(  "",               LEVEL_SL,               COURSE_SL,                                   14000,    0x00, 0x00, 0x00, _,         _)
 STUB_LEVEL(  "",               LEVEL_WDW,              COURSE_WDW,                                  17000,    0x00, 0x00, 0x00, _,         _)
 STUB_LEVEL(  "TINBOTU",        LEVEL_JRB,              COURSE_JRB,                                  20000,    0x00, 0x00, 0x00, _,         _)
-STUB_LEVEL(  "BIG WORLD",      LEVEL_THI,              COURSE_THI,                                  20000,    0x00, 0x00, 0x00, _,         _)
+DEFINE_LEVEL("BIG WORLD",      LEVEL_THI,              COURSE_THI,      thi,              grass,    20000,    0x0c, 0x0c, 0x20, _,         _)
 STUB_LEVEL(  "CLOCK TOWER",    LEVEL_TTC,              COURSE_TTC,                                  18000,    0x00, 0x00, 0x00, _,         _)
 STUB_LEVEL(  "",               LEVEL_RR,               COURSE_RR,                                   20000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("MAIN MAP",       LEVEL_CASTLE_GROUNDS,   COURSE_NONE,     castle_grounds,   outside,  25000,    0x00, 0x00, 0x00, _,         _)

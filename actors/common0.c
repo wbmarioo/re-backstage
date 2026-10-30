@@ -19,6 +19,9 @@ UNUSED static const u64 binid_3 = 3;
 #include "cannon_barrel/cannon_body.sou"
 UNUSED static const u64 binid_4 = 4;
 
+#include "chuckya/carry_boy.sou"
+UNUSED static const u64 binid_5 = 5;
+
 #include "test_platform/model.inc.c"
 #include "test_platform/collision.inc.c"
 UNUSED static const u64 binid_17 = 17;
