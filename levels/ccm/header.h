@@ -15,6 +15,7 @@ extern const GeoLayout ccm_geo_000D14[];
 extern const GeoLayout ccm_geo_000D4C[];
 extern const GeoLayout ccm_geo_000D84[];
 extern const GeoLayout ccm_geo_000DBC[];
+extern const GeoLayout chimney_geo[];
 
 // leveldata
 extern const Gfx snow_slider_1_dl_mesh[];
@@ -32,6 +33,7 @@ extern const Gfx ccm_seg7_dl_0702A9C0[];
 extern const Gfx ccm_seg7_dl_0702AAA8[];
 extern const Gfx ccm_seg7_dl_0702AB90[];
 extern const Gfx ccm_seg7_dl_0702AC78[];
+extern const Gfx snow_slider_obj_00_mesh[];
 
 extern const Collision ccm_seg7_area_2_collision[];
 extern const Collision ccm_seg7_area_3_collision[];

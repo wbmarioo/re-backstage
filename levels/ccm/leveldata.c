@@ -35,6 +35,7 @@
 #include "levels/ccm/yellow_smiley/model.inc.c"
 #include "levels/ccm/star_smiley/model.inc.c"
 #include "levels/ccm/moon_smiley/model.inc.c"
+#include "levels/ccm/chimney/model.inc.c"
 
 // Level collision data
 #include "levels/ccm/areas/2/collision.inc.c"

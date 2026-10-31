@@ -19,6 +19,9 @@
 // What's the point of having a border?
 #define BORDER_HEIGHT 0
 
+// Default is power build, uncomment to build pow
+// #define POWBUILD
+
 // Debug Build
 #define DEBUG
 

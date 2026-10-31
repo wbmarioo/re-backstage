@@ -3,7 +3,11 @@
 void bhv_small_bomp_init(void) { // s_dossun_bar_init
     o->oFaceAngleYaw -= 0x4000;
     o->oSmallBompInitX = o->oPosX;
-    o->oTimer = random_float() * 100.0f;
+	#ifdef POWBUILD
+        o->oTimer = random_float() * 100.0f;
+    #else
+        o->oTimer = 0.0f;
+    #endif
 }
 
 void bhv_small_bomp_loop(void) { // s_dossun_bar_main (modified)
