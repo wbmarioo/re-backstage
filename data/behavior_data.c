@@ -362,6 +362,7 @@ const BehaviorScript bhvGiantPole[] = {
     SET_INT(oInteractType, INTERACT_POLE),
     SET_HITBOX(/*Radius*/ 80, /*Height*/ 1350),
     SET_HOME(),
+    SET_FLOAT(oDrawingDistance, 3000),
     SET_INT(oIntangibleTimer, 0),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_giant_pole_loop),
