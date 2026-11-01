@@ -238,13 +238,10 @@
 #define MODEL_LLL_BOWSER_PIECE_12                 0x4E        // lll_geo_000D70
 #define MODEL_LLL_BOWSER_PIECE_13                 0x4F        // lll_geo_000D90
 #define MODEL_LLL_BOWSER_PIECE_14                 0x50        // lll_geo_000DB0
-#define MODEL_LLL_MOVING_OCTAGONAL_MESH_PLATFORM  0x36        // lll_geo_000B08
 //#define MODEL_LLL_SINKING_ROCK_BLOCK              0x37        // lll_geo_000DD0
 //#define MODEL_LLL_ROLLING_LOG                     0x39        // lll_geo_000DE8
 #define MODEL_LLL_WOOD_BRIDGE                     0x35        // lll_geo_000B50
-#define MODEL_LLL_LARGE_WOOD_BRIDGE               0x3B        // lll_geo_000B68
 #define MODEL_LLL_FALLING_PLATFORM                0x3C        // lll_geo_000B80
-#define MODEL_LLL_LARGE_FALLING_PLATFORM          0x3D        // lll_geo_000B98
 //#define MODEL_LLL_VOLCANO_FALLING_TRAP            0x53        // lll_geo_000EA8
 
 // ddd

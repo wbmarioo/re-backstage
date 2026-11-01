@@ -88,7 +88,6 @@ extern const BehaviorScript bhvBlueFish[];
 extern const BehaviorScript bhvMotos[];
 extern const BehaviorScript bhvMotosHand[];
 extern const BehaviorScript bhvLLLRotatingHexagonalPlatform[];
-extern const BehaviorScript bhvLLLMovingOctagonalMeshPlatform[];
 extern const BehaviorScript bhvLLLRotatingBlockWithFireBars[];
 extern const BehaviorScript bhvLLLRotatingHexFlame[];
 extern const BehaviorScript bhvLLLWoodPiece[];

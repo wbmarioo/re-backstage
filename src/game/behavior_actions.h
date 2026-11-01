@@ -118,7 +118,6 @@ Gfx *MotosProc1(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 void bhv_motos_loop(void);
 void bhv_motos_hand_loop(void);
 // pathmotosobj.p
-void bhv_lll_moving_octagonal_mesh_platform_loop(void);
 void bhv_lll_rotating_block_fire_bars_loop(void);
 void bhv_lll_rotating_hex_flame_loop(void);
 void bhv_lll_wood_piece_loop(void);

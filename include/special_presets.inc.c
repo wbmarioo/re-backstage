@@ -24,7 +24,7 @@ static struct SpecialPreset sSpecialObjectPresets[] = {
     { special_unknown_3,                          SPTYPE_NO_YROT_OR_PARAMS,  0x00, MODEL_UNKNOWN_B8, bhvStaticObject },
     { special_boo,                                SPTYPE_NO_YROT_OR_PARAMS,  0x00, MODEL_BOO, bhvCourtyardBooTriplet },
     { special_castle_floor_trap,                  SPTYPE_NO_YROT_OR_PARAMS,  0x00, MODEL_CASTLE_FLOOR_TRAP, bhvCastleFloorTrap },
-    { special_lll_moving_octagonal_mesh_platform, SPTYPE_NO_YROT_OR_PARAMS,  0x00, MODEL_LLL_MOVING_OCTAGONAL_MESH_PLATFORM, bhvLLLMovingOctagonalMeshPlatform },
+    { special_yellow_coin,                        SPTYPE_NO_YROT_OR_PARAMS,  0x00, MODEL_YELLOW_COIN, bhvYellowCoin },
     { special_empty_7,                            SPTYPE_NO_YROT_OR_PARAMS,  0x00, MODEL_NONE, bhvStaticObject }, // Weirdly in vanilla it's a snowball preset, but its internally named 'OBJSETCODE_MOTOS_OBJ02'
     { special_lll_drawbridge_spawner,             SPTYPE_YROT_NO_PARAMS,     0x00, MODEL_LLL_DRAWBRIDGE_PART, bhvLLLDrawbridgeSpawner },
     { special_empty_9,                            SPTYPE_NO_YROT_OR_PARAMS,  0x00, MODEL_NONE, bhvStaticObject },

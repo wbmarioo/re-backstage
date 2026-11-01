@@ -19,13 +19,10 @@ extern const GeoLayout lll_geo_000AC0[];
 extern const GeoLayout lll_geo_000AD8[];
 extern const GeoLayout lll_geo_000AF0[];
 
-extern const GeoLayout lll_geo_000B08[];
 extern const GeoLayout lll_geo_000B20[];
 extern const GeoLayout lll_geo_000B38[];
 extern const GeoLayout lll_geo_000B50[];
-extern const GeoLayout lll_geo_000B68[];
 extern const GeoLayout lll_geo_000B80[];
-extern const GeoLayout lll_geo_000B98[];
 extern const GeoLayout lll_geo_000BB0[];
 extern const GeoLayout lll_geo_000BC8[];
 extern const GeoLayout lll_geo_000BE0[];
@@ -96,7 +93,6 @@ extern const Gfx lll_seg7_dl_0701A628[];
 extern const Collision fire_bubble_collision[];
 extern const MacroObject fire_bubble_macro[];
 
-extern const Collision lll_seg7_collision_octagonal_moving_platform[];
 extern const Collision lll_seg7_collision_drawbridge[];
 extern const Collision lll_seg7_collision_rotating_fire_bars[];
 extern const Collision lll_seg7_collision_wood_piece[];
