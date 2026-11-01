@@ -20,7 +20,7 @@ const GeoLayout thi_geo_000608[] = {
                     GEO_DISPLAY_LIST(LAYER_ALPHA, big_world_3_dl_mesh),
                     GEO_DISPLAY_LIST(LAYER_TRANSPARENT, big_world_4_dl_mesh),
                     GEO_DISPLAY_LIST(LAYER_TRANSPARENT_DECAL, big_world_5_dl_mesh),
-                    GEO_ASM(0x1301, geo_movtex_draw_water_regions),
+                    GEO_ASM(THI_MOVTEX_AREA1_WATER, geo_movtex_draw_water_regions),
                     GEO_RENDER_OBJ(),
                     GEO_ASM(   0, geo_envfx_main),
                 GEO_CLOSE_NODE(),
