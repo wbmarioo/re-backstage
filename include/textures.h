@@ -128,9 +128,6 @@ extern const u8 spooky_09008000[];
 extern const u8 spooky_09008800[];
 extern const u8 spooky_09009000[];
 extern const u8 spooky_0900A000[];
-extern const u8 spooky_0900A800[];
-extern const u8 spooky_0900B000[];
-extern const u8 spooky_0900B800[];
 
 // water
 extern const u8 water_09001800[];

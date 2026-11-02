@@ -59,14 +59,7 @@
 // Level model IDs
 
 // bbh
-#define MODEL_BBH_STAIRCASE_STEP               0x35        // geo_bbh_0005B0
-#define MODEL_BBH_TILTING_FLOOR_PLATFORM       0x36        // geo_bbh_0005C8
-#define MODEL_BBH_TUMBLING_PLATFORM            0x37        // geo_bbh_0005E0
-#define MODEL_BBH_TUMBLING_PLATFORM_PART       0x38        // geo_bbh_0005F8
-#define MODEL_BBH_MOVING_BOOKSHELF             0x39        // geo_bbh_000610
-#define MODEL_BBH_MESH_ELEVATOR                0x3A        // geo_bbh_000628
-#define MODEL_BBH_MERRY_GO_ROUND               0x3B        // geo_bbh_000640
-#define MODEL_BBH_WOODEN_TOMB                  0x3C        // geo_bbh_000658
+#define MODEL_BBH_TILTING_FLOOR_PLATFORM       0x35        // RCP_HmsAna
 
 // ccm
 #define MODEL_CCM_ROPEWAY_LIFT                 0x36        // ccm_geo_0003D0
