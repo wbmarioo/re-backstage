@@ -7,7 +7,8 @@
 extern const GeoLayout bbh_geo[];
 
 // leveldata
-extern const Gfx bbh_room_01_dl_mesh[];
+extern const Gfx bbh_dl_01_mesh[];
+extern const Gfx bbh_dl_02_mesh[];
 extern const Collision bbh_collision[];
 
 // script

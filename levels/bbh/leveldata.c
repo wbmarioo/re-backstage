@@ -13,5 +13,7 @@
 #include "levels/bbh/material.inc.c"
 
 #include "levels/bbh/areas/1/1/model.inc.c"
+#include "levels/bbh/areas/1/2/model.inc.c"
+
 #include "levels/bbh/areas/1/collision.inc.c"
 #include "levels/bbh/areas/1/room.inc.c"

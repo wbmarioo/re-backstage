@@ -859,7 +859,7 @@ Gfx bbh_dl_01_mesh_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx bbh_room_01_dl_mesh[] = {
+Gfx bbh_dl_01_mesh[] = {
 	gsSPDisplayList(mat_teresa_obake_DarkWallMaterial),
 	gsSPDisplayList(bbh_dl_01_mesh_tri_0),
 	gsSPDisplayList(mat_teresa_obake_DarkWoodPlankMaterial),
