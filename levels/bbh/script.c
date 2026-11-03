@@ -31,6 +31,8 @@ const LevelScript level_bbh_entry[] = {
         WARP_NODE(/*id*/ WARP_NODE_SUCCESS, /*destLevel*/ LEVEL_CASTLE,  /*destArea*/ 0x01, /*destNode*/ 0x26,         /*flags*/ WARP_NO_CHECKPOINT),
         WARP_NODE(/*id*/ WARP_NODE_DEATH,   /*destLevel*/ LEVEL_CASTLE,  /*destArea*/ 0x01, /*destNode*/ 0x23,         /*flags*/ WARP_NO_CHECKPOINT),
         TERRAIN(/*terrainData*/ bbh_collision),
+        ROOMS(/*surfaceRooms*/ bbh_collision_rooms),
+        MACRO_OBJECTS(/*objList*/ bbh_macro),
         SET_BACKGROUND_MUSIC(/*settingsPreset*/ 0x0005, /*seq*/ SEQ_LEVEL_GRASS),
         TERRAIN_TYPE(/*terrainType*/ TERRAIN_STONE),
     END_AREA(),
