@@ -107,6 +107,7 @@ Gfx *geo_move_mario_part_from_parent(s32 run, UNUSED struct GraphNode *node, Mat
 #include "behaviors/tilting_inverted_pyramid.inc.c" // pathmovebg.p
 #include "behaviors/boo.inc.c" // pathobake.p (moved to 'pathteresa.p' in the final game)
 #include "behaviors/coin_inside_boo.inc.c" // pathobakecoin.p (moved to 'pathcoin.p' in the final game)
+#include "behaviors/bbh_haunted_bookshelf.inc.c"
 #include "behaviors/piranha_plant.inc.c" // pathpakun.p
 // There's 'pathpatch.p' but it just has bhv data (bhvLLLHexagonalMesh)
 #include "behaviors/bowser_puzzle_piece.inc.c" // pathpazzule.p

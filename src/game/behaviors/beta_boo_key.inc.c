@@ -17,20 +17,27 @@
  * that found in the bhvKeyInsideBoo code.
  */
 void bhv_small_key_loop(void) { // s_key
+    struct Object *bookshelf = cur_obj_nearest_object_with_behavior(bhvHauntedBookshelf);
+
     // Rotate the key
     o->oFaceAngleRoll += 0x200;
     o->oFaceAngleYaw += 0x200;
 
     if (obj_check_if_collided_with_object(o, gMarioObject)) {
-        // This line was used to activate the haunted bookshelf in BBH.
-        // The bookshelf has a commented out line to spawn this key object,
-        // and right after checks if oHauntedBookshelfShouldOpen isn't FALSE.
-        // Collecting the key spawned by the bookshelf causes it to recede.
-        o->parentObj->oHauntedBookshelfShouldOpen = TRUE;
-
         // Delete the object and spawn sparkles
         obj_mark_for_deletion(o);
         spawn_object(o, MODEL_SPARKLES, bhvCoinSparkles);
+
+        // If the number of keys is greater or equal to 4, open the bookshelf
+        if (gMarioState->numKeys >= 4) {
+            // This line was used to activate the haunted bookshelf in BBH.
+            // The bookshelf has a commented out line to spawn this key object,
+            // and right after checks if oHauntedBookshelfShouldOpen isn't FALSE.
+            // Collecting the key spawned by the bookshelf causes it to recede.
+            if (bookshelf != NULL) {
+                bookshelf->oHauntedBookshelfShouldOpen = TRUE;
+            }
+        }
     }
 }
 
@@ -161,5 +168,19 @@ static void (*sBetaBooKeyActions[])(void) = { // keycoin_modejmp
  * Update function for bhvKeyInsideBoo.
  */
 void bhv_key_inside_boo_loop(void) { // s_teresa_key
+    struct Object *bookshelf = cur_obj_nearest_object_with_behavior(bhvHauntedBookshelf);
+
     cur_obj_call_action_function(sBetaBooKeyActions);
+
+    // Copied from bhv_small_key_loop so that the key disappears when collected
+    if (obj_check_if_collided_with_object(o, gMarioObject)) {
+        obj_mark_for_deletion(o);
+        spawn_object(o, MODEL_SPARKLES, bhvCoinSparkles);
+
+        if (gMarioState->numKeys >= 4) {
+            if (bookshelf != NULL) {
+                bookshelf->oHauntedBookshelfShouldOpen = TRUE;
+            }
+        }
+    }
 }

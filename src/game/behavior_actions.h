@@ -133,6 +133,8 @@ void bhv_courtyard_boo_triplet_init(void);
 void bhv_boo_loop(void);
 // pathobakecoin.p
 void bhv_coin_inside_boo_loop(void);
+// pathteretrap.p
+void bhv_haunted_bookshelf_loop(void);
 // pathpakun.p
 s32 mario_moving_fast_enough_to_make_piranha_plant_bite(void);
 void bhv_piranha_plant_loop(void);

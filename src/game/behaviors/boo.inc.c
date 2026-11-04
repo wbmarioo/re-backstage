@@ -34,7 +34,7 @@ void bhv_courtyard_boo_triplet_init(void) { // s_make3teresa
     for (i = 0; i < 3; i++) {
         boo = spawn_object_relative(
                 BOO_BP_GENERIC, sCourtyardBooTripletPositions[i][0], sCourtyardBooTripletPositions[i][1],
-                sCourtyardBooTripletPositions[i][2], o, MODEL_BOO, bhvGhostHuntBoo);
+                sCourtyardBooTripletPositions[i][2], o, MODEL_BOO, bhvBoo);
         boo->oMoveAngleYaw = random_u16();
     }
 

@@ -94,8 +94,8 @@ static struct MacroPreset sMacroObjectPresets[] = {
     /* macro_empty_186                   */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_empty_187                   */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_empty_188                   */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
-    /* macro_boo_1                       */ { bhvGhostHuntBoo, MODEL_BOO, BOO_BP_GHOST_HUNT }, // unused
-    /* macro_boo_2                       */ { bhvGhostHuntBoo, MODEL_BOO, BOO_BP_GHOST_HUNT }, // unused
+    /* macro_boo_1                       */ { bhvBoo, MODEL_BOO, BOO_BP_GHOST_HUNT }, // unused
+    /* macro_boo_2                       */ { bhvBoo, MODEL_BOO, BOO_BP_GHOST_HUNT }, // unused
     /* macro_boo_group                   */ { bhvCourtyardBooTriplet, MODEL_BOO, 0 }, // unused
     /* macro_beta_key                    */ { bhvSmallKey, MODEL_SMALL_KEY, 0 }, // unused
     /* macro_empty_197                   */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },

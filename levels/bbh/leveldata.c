@@ -23,7 +23,9 @@
 #include "levels/bbh/areas/1/9/model.inc.c"
 #include "levels/bbh/areas/1/10/model.inc.c"
 #include "levels/bbh/areas/1/11/model.inc.c"
+#include "levels/bbh/moving_bookshelf/model.inc.c"
 
 #include "levels/bbh/areas/1/collision.inc.c"
 #include "levels/bbh/areas/1/room.inc.c"
 #include "levels/bbh/areas/1/macro.inc.c"
+#include "levels/bbh/moving_bookshelf/collision.inc.c"

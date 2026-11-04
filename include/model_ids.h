@@ -60,6 +60,7 @@
 
 // bbh
 #define MODEL_BBH_TILTING_FLOOR_PLATFORM       0x35        // RCP_HmsAna
+#define MODEL_BBH_MOVING_BOOKSHELF             0x36        // geo_bbh_000610
 
 // ccm
 #define MODEL_CCM_ROPEWAY_LIFT                 0x36        // ccm_geo_0003D0

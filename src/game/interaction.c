@@ -46,6 +46,7 @@
 u8 sDelayInvincTimer;
 s16 sInvulnerable;
 u32 interact_coin(struct MarioState *, u32, struct Object *);
+u32 interact_key(struct MarioState *, u32, struct Object *);
 u32 interact_water_ring(struct MarioState *, u32, struct Object *);
 u32 interact_star(struct MarioState *, u32, struct Object *);
 u32 interact_warp(struct MarioState *, u32, struct Object *);
@@ -70,6 +71,7 @@ struct InteractionHandler {
 
 static struct InteractionHandler sInteractionHandlers[] = {
     { INTERACT_COIN, interact_coin },
+    { INTERACT_KEY, interact_key },
     { INTERACT_WATER_RING, interact_water_ring },
     { INTERACT_STAR, interact_star },
     //{ INTERACT_BBH_ENTRANCE, interact_bbh_entrance },
@@ -618,6 +620,12 @@ u32 interact_coin(struct MarioState *m, UNUSED u32 interactType, struct Object *
         play_sound(SOUND_GENERAL_COLLECT_1UP, gGlobalSoundSource);
     }
 
+    return FALSE;
+}
+
+u32 interact_key(struct MarioState *m, UNUSED u32 interactType, struct Object *o) {
+    m->numKeys++;
+    o->oInteractStatus = INT_STATUS_INTERACTED;
     return FALSE;
 }
 

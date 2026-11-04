@@ -33,6 +33,7 @@
 #include "levels/wf/header.h"
 #include "levels/ccm/header.h"
 #include "levels/thi/header.h"
+#include "levels/bbh/header.h"
 
 #include "make_const_nonconst.h"
 #include "behavior_data.h"
@@ -1021,6 +1022,7 @@ const BehaviorScript bhvBetaTrampolineSpring[] = { // e_bane_naka
 
 const BehaviorScript bhvKeyInsideBoo[] = { // e_teresa_key
     BEGIN(OBJ_LIST_LEVEL),
+    SET_INT(oInteractType, INTERACT_KEY),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     SET_HITBOX(/*Radius*/ 32, /*Height*/ 64),
     SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ -70, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
@@ -1370,7 +1372,7 @@ const BehaviorScript bhvCourtyardBooTriplet[] = { // e_obake_fly
 };
 
 // e_teresa_typeA, e_teresa & e_cointeresa
-const BehaviorScript bhvGhostHuntBoo[] = {
+const BehaviorScript bhvBoo[] = {
     BEGIN(OBJ_LIST_GENACTOR),
     OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     SET_INT(oIntangibleTimer, 0),
@@ -1381,6 +1383,24 @@ const BehaviorScript bhvGhostHuntBoo[] = {
     SET_FLOAT(oGraphYOffset,60/2),
     CALL_NATIVE(bhv_init_room),
     SPAWN_CHILD(/*Model*/ MODEL_YELLOW_COIN, /*Behavior*/ bhvCoinInsideBoo),
+    SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ 0, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_boo_loop),
+    END_LOOP(),
+};
+
+// Custom boo bhv that spawns keys
+const BehaviorScript bhvKeyBoo[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    SET_INT(oIntangibleTimer, 0),
+    SET_HOME(),
+    SET_INT(oDamageOrCoinValue, 2),
+    SET_HITBOX(/*Radius*/ 140, /*Height*/ 80),
+    SET_HURTBOX(/*Radius*/ 40, /*Height*/ 60),
+    SET_FLOAT(oGraphYOffset,60/2),
+    CALL_NATIVE(bhv_init_room),
+    SPAWN_CHILD(/*Model*/ MODEL_SMALL_KEY, /*Behavior*/ bhvKeyInsideBoo),
     SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ 0, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_boo_loop),
@@ -1399,6 +1419,18 @@ const BehaviorScript bhvCoinInsideBoo[] = { // e_obake_coin
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_coin_inside_boo_loop),
         ADD_INT(oAnimState, 1),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvHauntedBookshelf[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    LOAD_COLLISION_DATA(bbh_collision_haunted_bookshelf),
+    SET_HOME(),
+    // SET_INT(oRoom, 15),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_haunted_bookshelf_loop),
+        CALL_NATIVE(load_object_collision_model),
     END_LOOP(),
 };
 

@@ -325,6 +325,11 @@
     #define BETA_BOO_KEY_ACT_DROPPING 1
     #define BETA_BOO_KEY_ACT_DROPPED  2
 
+/* BBH Haunted Bookshelf */
+    /* oAction */
+    #define HAUNTED_BOOKSHELF_ACT_IDLE   0
+    #define HAUNTED_BOOKSHELF_ACT_RECEDE 1
+
 /* Piranha Plant */
     /* oAction */
     #define PIRANHA_PLANT_ACT_IDLE            0

@@ -11,6 +11,7 @@
 #define INTERACT_DAMAGE         /* 0x00000008 */ (1 <<  3)
 #define INTERACT_COIN           /* 0x00000010 */ (1 <<  4)
 //#define INTERACT_CAP            /* 0x00000020 */ (1 <<  5)
+#define INTERACT_KEY            /* 0x00000020 */ (1 <<  5)
 #define INTERACT_POLE           /* 0x00000040 */ (1 <<  6)
 #define INTERACT_KOOPA          /* 0x00000080 */ (1 <<  7)
 #define INTERACT_UNKNOWN_08     /* 0x00000100 */ (1 <<  8)

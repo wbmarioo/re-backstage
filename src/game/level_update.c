@@ -514,6 +514,11 @@ void update_hud_values(void) {
         gMarioState->numLives = (s8) 999; //! Wrong variable
     }
 
+    if (gHudDisplay.keys < gMarioState->numKeys) {
+        gHudDisplay.keys++;
+        play_sound(SOUND_GENERAL_COIN, gMarioState->marioObj->header.gfx.cameraToObject);
+    }
+
     gHudDisplay.stars = gMarioState->numStars;
     gHudDisplay.lives = gMarioState->numLives;
     gHudDisplay.keys = gMarioState->numKeys;
