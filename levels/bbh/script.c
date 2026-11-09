@@ -37,6 +37,7 @@ static const LevelScript script_func_local_1[] = {
 };
 
 static const LevelScript script_func_local_2[] = {
+    OBJECT(/*model*/ MODEL_BBH_TUMBLING_PLATFORM,      /*pos*/  3166,     0,  -768, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvBBHTumblingBridge),
     OBJECT(/*model*/ MODEL_BBH_MOVING_BOOKSHELF,       /*pos*/ -2199,   921,   213, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvHauntedBookshelf),
     RETURN(),
 };
@@ -66,6 +67,8 @@ const LevelScript level_bbh_entry[] = {
         JUMP_LINK(script_func_global_10),
         JUMP_LINK(script_func_global_18),
         LOAD_MODEL_FROM_GEO(MODEL_CASTLE_DOOR, RCP_HmsMainDoor),
+        LOAD_MODEL_FROM_GEO(MODEL_BBH_TUMBLING_PLATFORM,      tumbling_platform_far_geo),
+        LOAD_MODEL_FROM_GEO(MODEL_BBH_TUMBLING_PLATFORM_PART,   tumbling_platform_near_geo),
         LOAD_MODEL_FROM_GEO(MODEL_BBH_MOVING_BOOKSHELF,       haunted_bookshelf_geo),
         OBJECT(/*model*/ MODEL_NONE, /*pos*/ -700, 0, -1650, /*angle*/ 0, 90, 0, /*bhvParam*/ BPARAM2(WARP_NODE_0A), /*bhv*/ bhvSpinAirborneWarp),
         OBJECT(/*model*/ MODEL_CASTLE_DOOR,       /*pos*/   -52,    0, 1458, 0,90, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvDoor),

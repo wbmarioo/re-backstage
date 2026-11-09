@@ -403,7 +403,8 @@
 /* Tumbling Bridge */
     /* oBhvParams2ndByte */
     #define TUMBLING_BRIDGE_BP_WF    0
-    #define TUMBLING_BRIDGE_BP_LLL   1
+    #define TUMBLING_BRIDGE_BP_BBH   1
+    #define TUMBLING_BRIDGE_BP_LLL   2
 
 /* Thwomp */
     /* oAction */
