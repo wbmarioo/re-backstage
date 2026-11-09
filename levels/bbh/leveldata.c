@@ -9,7 +9,6 @@
 
 #include "make_const_nonconst.h"
 
-#include "levels/bbh/texture.inc.c"
 #include "levels/bbh/material.inc.c"
 
 #include "levels/bbh/areas/1/1/model.inc.c"

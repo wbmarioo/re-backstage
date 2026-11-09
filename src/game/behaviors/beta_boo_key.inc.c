@@ -144,6 +144,9 @@ static void key_inside_boo_inside_boo_loop(void) { // keycoin_take (modified)
     struct Object *parent = o->parentObj;
     obj_copy_pos(o, parent);
 
+    // Set the key color to the parent Boo's second parameter
+    o->oAnimState = parent->oBhvParams2ndByte;
+
     // Use a Y offset of 40 to make the key model aligned correctly.
     // (Why didn't they use oGraphYOffset?)
     o->oPosY += 40.0f;

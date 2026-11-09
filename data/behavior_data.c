@@ -1427,7 +1427,8 @@ const BehaviorScript bhvHauntedBookshelf[] = {
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     LOAD_COLLISION_DATA(bbh_collision_haunted_bookshelf),
     SET_HOME(),
-    // SET_INT(oRoom, 15),
+    // BBH Import uses room 16 for the library instead of 6
+    SET_INT(oRoom, 16),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_haunted_bookshelf_loop),
         CALL_NATIVE(load_object_collision_model),

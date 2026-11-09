@@ -516,7 +516,6 @@ void update_hud_values(void) {
 
     if (gHudDisplay.keys < gMarioState->numKeys) {
         gHudDisplay.keys++;
-        play_sound(SOUND_GENERAL_COIN, gMarioState->marioObj->header.gfx.cameraToObject);
     }
 
     gHudDisplay.stars = gMarioState->numStars;

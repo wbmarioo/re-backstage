@@ -30,9 +30,9 @@ static const LevelScript script_func_local_1[] = {
     OBJECT(/*model*/ MODEL_BOO, /*pos*/ -1028, 80,  -424, 0, 0, 0,    /*bhvParam*/ 0x00000000, /*bhv*/ bhvBoo),
     OBJECT(/*model*/ MODEL_BOO, /*pos*/  590, 1000, -1048, 0, 90, 0,  /*bhvParam*/ 0x00000000, /*bhv*/ bhvBoo),
     OBJECT(/*model*/ MODEL_BOO, /*pos*/ -1574, 80, -1192,  0, 0, 0,   /*bhvParam*/ 0x00000000, /*bhv*/ bhvKeyBoo),
-    OBJECT(/*model*/ MODEL_BOO, /*pos*/  3242, 1000, -814, 0, 0, 0,   /*bhvParam*/ 0x00000000, /*bhv*/ bhvKeyBoo),
-    OBJECT(/*model*/ MODEL_BOO, /*pos*/  -356, 1000, -706, 0, 0, 0,   /*bhvParam*/ 0x00000000, /*bhv*/ bhvKeyBoo),
-    OBJECT(/*model*/ MODEL_BOO, /*pos*/   1642, 80,  -960, 0, 0, 0,   /*bhvParam*/ 0x00000000, /*bhv*/ bhvKeyBoo),
+    OBJECT(/*model*/ MODEL_BOO, /*pos*/  3242, 1000, -814, 0, 0, 0,   /*bhvParam*/ 0x00020000, /*bhv*/ bhvKeyBoo),
+    OBJECT(/*model*/ MODEL_BOO, /*pos*/  -356, 1000, -706, 0, 0, 0,   /*bhvParam*/ 0x00030000, /*bhv*/ bhvKeyBoo),
+    OBJECT(/*model*/ MODEL_BOO, /*pos*/   1642, 80,  -960, 0, 0, 0,   /*bhvParam*/ 0x00010000, /*bhv*/ bhvKeyBoo),
     RETURN(),
 };
 
