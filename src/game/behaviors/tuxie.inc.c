@@ -282,7 +282,7 @@ Gfx *geo_switch_tuxie_mother_eyes(s32 run, struct GraphNode *node, UNUSED Mat4 *
         // timer logic for blinking. uses cases 0-2.
         timer = gGlobalTimer % 50;
         if (timer < 43) {
-            switchCase->selectedCase = 0;
+            switchCase->selectedCase = 4;
         } else if (timer < 45) {
             switchCase->selectedCase = 1;
         } else if (timer < 47) {
@@ -297,7 +297,11 @@ Gfx *geo_switch_tuxie_mother_eyes(s32 run, struct GraphNode *node, UNUSED Mat4 *
          */
         if (obj->behavior == segmented_to_virtual(bhvTuxiesMother)) {
             if (obj->oForwardVel > 5.0f) {
-                switchCase->selectedCase = 3;
+                if (obj->oDistanceToMario < 170.f) {
+                    switchCase->selectedCase = 3;
+                } else {
+                    switchCase->selectedCase = 4;
+                }
             }
         }
     }

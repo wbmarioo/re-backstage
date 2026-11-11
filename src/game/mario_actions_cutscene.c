@@ -196,7 +196,9 @@ s32 act_star_dance_water(struct MarioState *m) {
 s32 act_fall_after_star_grab(struct MarioState *m) {
     if (m->pos[1] < m->waterLevel - 130) {
         play_sound(SOUND_ACTION_WATER_PLUNGE, m->marioObj->header.gfx.cameraToObject);
+        #ifdef POWBUILD
         m->particleFlags |= PARTICLE_WATER_SPLASH;
+        #endif
         return set_mario_action(m, ACT_STAR_DANCE_WATER, m->actionArg);
     }
     if (perform_air_step(m, 1) == AIR_STEP_LANDED) {
@@ -735,9 +737,11 @@ s32 mario_execute_cutscene_action(struct MarioState *m) {
     }
     /* clang-format on */
 
+    #ifdef POWBUILD
     if (!cancel && (m->input & INPUT_IN_WATER)) {
         m->particleFlags |= PARTICLE_IDLE_WATER_WAVE;
     }
+    #endif
 
     return cancel;
 }

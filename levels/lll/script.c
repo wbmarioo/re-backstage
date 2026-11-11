@@ -63,7 +63,7 @@ static const LevelScript script_func_local_4[] = { // Enemies
 };
 
 static const LevelScript script_func_local_5[] = { // Stars
-    OBJECT(/*model*/ MODEL_STAR, /*pos*/ 0, 300,  -6225, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvStar),
+    OBJECT(/*model*/ MODEL_STAR, /*pos*/ 0, 375,  -6225, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvStar),
     RETURN(),
 };
 

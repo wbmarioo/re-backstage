@@ -1535,5 +1535,22 @@ const Collision bbh_collision[] = {
 	COL_TRI(617, 618, 616),
 	COL_TRI(617, 616, 615),
 	COL_TRI_STOP(),
+    COL_SPECIAL_INIT(16),
+    SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_null_start,   /*pos*/  -52,  0,  1458, /*yaw*/ 128), // unused, probably an early way to set initial position
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/   -52,    0, 1458,  /*yaw*/   64),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/   -52,    0,  640,  /*yaw*/   64),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/   432,    0,  -51,  /*yaw*/  128),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/  1612,    0, -51,   /*yaw*/  128),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/  2100,    0, 1460,  /*yaw*/   64),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/   931,    0, -1683, /*yaw*/   64),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/ -2172,    0, 1074,  /*yaw*/    0),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/  3456,    0, 1078,  /*yaw*/    0),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/  -764,  922, 1408,  /*yaw*/   64),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/  -764,  922,  642,  /*yaw*/   64),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/   182,  922,  -50,  /*yaw*/  128),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/  1612,  922,  -50,  /*yaw*/  128),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/  2100,  922, 1818,  /*yaw*/   64),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/  2100,  922,  488,  /*yaw*/   64),
+	SPECIAL_OBJECT_WITH_YAW(/*preset*/ special_castle_door,       /*pos*/ -2176, 1075, 1072,  /*yaw*/    0),
 	COL_END()
 };

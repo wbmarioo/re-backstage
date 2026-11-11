@@ -332,9 +332,11 @@ s32 act_jump(struct MarioState *m) {
         return TRUE;
     }
 
+    #ifdef POWBUILD
     if (m->input & INPUT_Z_PRESSED) {
         return set_mario_action(m, ACT_GROUND_POUND, 0);
     }
+    #endif
 
     play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, 0);
     common_air_action_step(m, ACT_JUMP_LAND, MARIO_ANIM_SINGLE_JUMP,
@@ -349,9 +351,11 @@ s32 act_double_jump(struct MarioState *m) {
         return TRUE;
     }
 
+    #ifdef POWBUILD
     if (m->input & INPUT_Z_PRESSED) {
         return set_mario_action(m, ACT_GROUND_POUND, 0);
     }
+    #endif
 
     play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, SOUND_MARIO_HAUGH);
     common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, animation,
@@ -366,9 +370,11 @@ s32 act_freefall(struct MarioState *m) {
         return set_mario_action(m, ACT_DIVE, 0);
     }
 
+    #ifdef POWBUILD
     if (m->input & INPUT_Z_PRESSED) {
         return set_mario_action(m, ACT_GROUND_POUND, 0);
     }
+    #endif
 
     switch (m->actionArg) {
         case 0:
@@ -392,10 +398,11 @@ s32 act_hold_jump(struct MarioState *m) {
         return set_mario_action(m, ACT_AIR_THROW, 0);
     }
 
+    #ifdef POWBUILD
     if (m->input & INPUT_Z_PRESSED) {
-        return drop_and_set_mario_action(m, ACT_GROUND_POUND, 0);
+        return set_mario_action(m, ACT_GROUND_POUND, 0);
     }
-
+    #endif
     play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, 0);
     common_air_action_step(m, ACT_HOLD_JUMP_LAND, MARIO_ANIM_JUMP_WITH_LIGHT_OBJ,
                            AIR_STEP_CHECK_LEDGE_GRAB);
@@ -418,9 +425,11 @@ s32 act_hold_freefall(struct MarioState *m) {
         return set_mario_action(m, ACT_AIR_THROW, 0);
     }
 
+    #ifdef POWBUILD
     if (m->input & INPUT_Z_PRESSED) {
-        return drop_and_set_mario_action(m, ACT_GROUND_POUND, 0);
+        return set_mario_action(m, ACT_GROUND_POUND, 0);
     }
+    #endif
 
     common_air_action_step(m, ACT_HOLD_FREEFALL_LAND, animation, AIR_STEP_CHECK_LEDGE_GRAB);
     return FALSE;
@@ -431,9 +440,11 @@ s32 act_side_flip(struct MarioState *m) {
         return set_mario_action(m, ACT_DIVE, 0);
     }
 
+    #ifdef POWBUILD
     if (m->input & INPUT_Z_PRESSED) {
         return set_mario_action(m, ACT_GROUND_POUND, 0);
     }
+    #endif
 
     play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, 0);
 
@@ -454,9 +465,11 @@ s32 act_wall_kick_air(struct MarioState *m) {
         return set_mario_action(m, ACT_DIVE, 0);
     }
 
+    #ifdef POWBUILD
     if (m->input & INPUT_Z_PRESSED) {
         return set_mario_action(m, ACT_GROUND_POUND, 0);
     }
+    #endif
 
     // No play_mario_jump_sound here, so it doesn't play when doing wall kicks
     common_air_action_step(m, ACT_JUMP_LAND, MARIO_ANIM_SLIDEJUMP, AIR_STEP_CHECK_LEDGE_GRAB);
@@ -702,6 +715,7 @@ s32 act_steep_jump(struct MarioState *m) {
     return FALSE;
 }
 
+#ifdef POWBUILD
 s32 act_ground_pound(struct MarioState *m) {
     u32 stepResult;
     f32 yOffset;
@@ -757,6 +771,7 @@ s32 act_ground_pound(struct MarioState *m) {
 
     return FALSE;
 }
+#endif
 
 s32 act_burning_jump(struct MarioState *m) {
     play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, m->actionArg == 0 ? 0 : -1);
@@ -1238,12 +1253,14 @@ s32 act_shot_from_cannon(struct MarioState *m) {
 }
 
 s32 act_flying(struct MarioState *m) {
+    #ifdef POWBUILD
     if (m->input & INPUT_Z_PRESSED) {
         if (m->area->camera->mode == CAMERA_MODE_BEHIND_MARIO) {
             set_camera_mode(m->area->camera, m->area->camera->defMode, 1);
         }
         return set_mario_action(m, ACT_GROUND_POUND, 1);
     }
+    #endif
 
     if (m->area->camera->mode != CAMERA_MODE_BEHIND_MARIO) {
         set_camera_mode(m->area->camera, CAMERA_MODE_BEHIND_MARIO, 1);
@@ -1391,7 +1408,9 @@ s32 mario_execute_airborne_action(struct MarioState *m) {
         case ACT_HOLD_BUTT_SLIDE_AIR:  cancel = act_hold_butt_slide_air(m);  break;
         case ACT_LAVA_BOOST:           cancel = act_lava_boost(m);           break;
         case ACT_BACKWARD_ROLLOUT:     cancel = act_backward_rollout(m);     break;
+        #ifdef POWBUILD
         case ACT_GROUND_POUND:         cancel = act_ground_pound(m);         break;
+        #endif
         case ACT_THROWN_FORWARD:       cancel = act_thrown_forward(m);       break;
         case ACT_THROWN_BACKWARD:      cancel = act_thrown_backward(m);      break;
         case ACT_FLYING:               cancel = act_flying(m);               break;
