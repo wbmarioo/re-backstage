@@ -17,7 +17,7 @@
 #define UNUSED_STACKSIZE 0x1400
 
 // What's the point of having a border?
-#define BORDER_HEIGHT 0
+#define BORDER_HEIGHT 2
 
 // Default is power build, uncomment to build pow
 #define POWBUILD

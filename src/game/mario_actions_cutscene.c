@@ -159,7 +159,7 @@ void general_star_dance_handler(struct MarioState *m) {
                 play_course_clear();
                 break;
 
-            case 42:
+            case 62:
                 play_sound(SOUND_MARIO_YEAH, m->marioObj->header.gfx.cameraToObject);
                 break;
 
@@ -174,7 +174,7 @@ s32 act_star_dance(struct MarioState *m) {
     m->faceAngle[1] = m->area->camera->yaw;
     set_mario_animation(m, MARIO_ANIM_STAR_DANCE);
     general_star_dance_handler(m);
-    if (m->actionState != 2 && m->actionTimer >= 40) {
+    if (m->actionState != 2 && m->actionTimer >= 102) {
         m->marioBodyState->handState = MARIO_HAND_PEACE_SIGN;
     }
     stop_and_set_height_to_floor(m);
